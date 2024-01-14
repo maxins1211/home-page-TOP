@@ -1,0 +1,254 @@
+:root {
+  --primary-color: rgb(89, 89, 174);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", sans-serif;
+}
+
+/* About-me section */
+
+.section-1 {
+  padding-top: 20px;
+  position: relative;
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+.img-holder h1 {
+  font-size: 2.6rem;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+
+.img-holder {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  min-width: 250px;
+  min-height: 300px;
+  background: url("/images/pexels-cottonbro-studio-4064839.jpg") center;
+  background-size: cover;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.information {
+  background-color: white;
+  max-width: 600px;
+  padding: 20px;
+  line-height: 20px;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.information h2 {
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.information p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.icon-container {
+  margin-top: 10px;
+}
+
+/* Skew bg */
+
+.section-1::before,
+.section-1::after {
+  content: "";
+  background-color: white;
+  position: absolute;
+  height: 200px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: top right;
+  transform: skewY(-7deg);
+  z-index: 1;
+}
+
+/* Project list */
+main {
+  margin-top: 30px;
+}
+
+main h1 {
+  font-weight: 400;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  height: 320px;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  color: white;
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.proj-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.proj-container h3 {
+  flex: auto;
+  margin-left: 10px;
+}
+
+.project-card p {
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+
+.proj-container i {
+  font-size: 20px;
+}
+
+.proj-container img {
+  width: 20px;
+  height: 20px;
+}
+
+.icon {
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+i {
+  margin-right: 10px;
+  font-size: 25px;
+  color: black;
+}
+
+/* Contact section */
+
+.contact-me {
+  margin-top: 50px;
+  background-color: var(--primary-color);
+}
+
+.contact {
+  padding: 20px 0;
+  color: white;
+  display: flex;
+  background-color: var(--primary-color);
+  justify-content: space-between;
+}
+
+.text-box h1 {
+  margin: 10px 0;
+}
+
+.text-box p {
+  max-width: 300px;
+  margin: 10px 0;
+}
+.text-box i {
+  margin: 10px 0;
+  margin-right: 10px;
+}
+
+picture img {
+  margin: 10px;
+  width: 400px;
+  height: 300px;
+}
+
+.i-container .icon {
+  filter: invert(1);
+}
+
+.i-container {
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+}
+.red {
+  background-color: rgb(181, 80, 80);
+}
+
+.blue {
+  background-color: rgb(84, 84, 235);
+}
+
+.green {
+  background-color: rgb(75, 162, 75);
+}
+
+.pink {
+  background-color: rgb(207, 117, 132);
+}
+
+.orange {
+  background-color: rgb(211, 164, 78);
+}
+
+.purple {
+  background-color: rgb(163, 80, 163);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .img-holder {
+    position: relative;
+    bottom: 30px;
+    left: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-me {
+    flex-direction: column;
+  }
+  .project-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact {
+    flex-direction: column;
+  }
+
+  picture img {
+    width: 100%;
+  }
+}
